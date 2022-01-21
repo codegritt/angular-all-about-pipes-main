@@ -1,0 +1,10 @@
+<div>
+  {{today | date:'yyyy-MMM-dd'}}
+  <h1>Pure Impure pipes example</h1>
+  <ul>
+    <li *ngFor="let user of users | sortList:'name'">
+      {{user.name}} - {{user.age}}
+    </li>
+  </ul>
+  <button (click)="onClickAdd()">Add</button>
+</div>
